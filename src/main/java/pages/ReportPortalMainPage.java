@@ -94,4 +94,5 @@ public class ReportPortalMainPage extends BasePage {
                 .openPage()
                 .loginToDashboardPage(testUser);
     }
+
 }
