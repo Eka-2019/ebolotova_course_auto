@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.LaunchPage;
 import pages.ReportPortalMainPage;
@@ -19,7 +18,6 @@ import utils.LaunchPageTestData;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Arrays;
 import java.util.List;
 
 @Listeners({TestListener.class})
