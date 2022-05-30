@@ -8,7 +8,7 @@
         <parameter name="login" value="default"/>
         <parameter name="password" value="1q2w3e"/>
         <classes>
-            <class name="tests.testng.testngtests.LoginTest"/>
+            <class name="tests.LoginTest"/>
         </classes>
     </test>
 </suite>

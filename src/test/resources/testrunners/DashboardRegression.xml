@@ -8,8 +8,8 @@
 
     <test name="DashboardsTests">
         <classes>
-            <class name="tests.testng.testngtests.EmptyDashboardTest"/>
-            <class name="tests.testng.testngtests.AddDeleteDashboardTest"/>
+            <class name="tests.EmptyDashboardTest"/>
+            <class name="tests.AddDeleteDashboardTest"/>
         </classes>
     </test>
 </suite>

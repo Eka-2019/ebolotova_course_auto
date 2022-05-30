@@ -11,8 +11,8 @@
         <parameter name="login" value="eka_2022"/>
         <parameter name="password" value="Qweasd_123?"/>
         <classes>
-            <class name="tests.testng.testngtests.LoginTest"/>
-            <class name="tests.testng.testngtests.LoginByStepsTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.LoginByStepsTest"/>
         </classes>
     </test>
 </suite>

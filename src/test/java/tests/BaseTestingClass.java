@@ -1,4 +1,4 @@
-package tests.testng.testngtests;
+package tests;
 
 import driver.DriverManager;
 import io.qameta.allure.Step;
