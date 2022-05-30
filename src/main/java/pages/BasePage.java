@@ -1,6 +1,8 @@
 package pages;
 
+import driver.DriverManager;
 import lombok.Getter;
+import model.User;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +15,7 @@ import java.net.URISyntaxException;
 @Getter
 public abstract class BasePage {
 
+    protected DriverManager dm = new DriverManager();
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected static final int WAIT_TIME_OUT = 20;
@@ -28,5 +31,12 @@ public abstract class BasePage {
     protected BasePage(WebDriver driver) {
         this.driver = driver;
         this.base_url = System.getProperty("url");
+    }
+
+    public ReportPortalMainPage loginToPortalMainPageOld(User testUser) {
+        driver = dm.getDriver();
+        return new ReportLoginPage(driver)
+                .openPage()
+                .loginToDashboardPage(testUser);
     }
 }
