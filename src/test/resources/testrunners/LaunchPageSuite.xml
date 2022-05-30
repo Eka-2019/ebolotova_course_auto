@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Report Portal Tests automation regression suite" parallel="classes" thread-count="2">
-    <listeners>
-        <listener class-name="testlistener.TestListener"/>
-    </listeners>
+<suite name="Report Portal Tests automation regression suite">
 
-    <test name="DashboardsTests">
+    <test name="LaunchPageTest">
         <classes>
             <class name="tests.LaunchPageTest"/>
         </classes>

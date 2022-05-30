@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class Config {
 
-    String env = System.getProperty("env","std");
+    String env = System.getProperty("env","docker");
     private final Logger LOGGER = Logger.getLogger(String.valueOf(Config.class));
 
     public void initProperties(){
