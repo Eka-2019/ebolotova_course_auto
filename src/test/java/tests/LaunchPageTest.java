@@ -2,10 +2,9 @@ package tests;
 
 import model.User;
 import org.apache.log4j.Logger;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import pages.LaunchPage;
 import pages.ReportPortalMainPage;
 import service.UserCreator;
 
@@ -22,7 +21,7 @@ public class LaunchPageTest extends BaseTestingClass {
         super(testN, expected);
     }
 
-    @Parameterized.Parameters(name = "{index}: Test number={0}, expected={1}")
+    @Parameters({"testN", "expected"})
     public static Iterable<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {"1", Arrays.asList("10", "1", "9", "1", "8", "5")},
@@ -39,8 +38,8 @@ public class LaunchPageTest extends BaseTestingClass {
         LOGGER.info("User login and password: " + testUser);
         LOGGER.info("Url: " + System.getProperty("url"));
         LOGGER.info("Browser: " + System.getProperty("browser"));
-        //ReportPortalMainPage page = loginToPortalMainPageOld(testUser);
-        //LaunchPage launchPage = page.getLaunchReport();
+        ReportPortalMainPage page = loginToPortalMainPageOld(testUser);
+        LaunchPage launchPage = page.getLaunchReport();
        // List<String> actualTest1 = launchPage.getEachDemoTestData(testN);
        // Assert.assertEquals(expected, actualTest1);
     }

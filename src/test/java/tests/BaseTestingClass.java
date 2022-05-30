@@ -22,6 +22,8 @@ public class BaseTestingClass {
     protected String testN;
     protected List<String> expected;
 
+    public BaseTestingClass() {
+    }
 
     public BaseTestingClass(String testN, List<String> expected) {
         this.testN = testN;
