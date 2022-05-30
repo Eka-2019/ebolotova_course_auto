@@ -3,11 +3,14 @@ package tests;
 import model.User;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.LaunchPage;
 import pages.ReportPortalMainPage;
 import service.UserCreator;
+import testlistener.TestListener;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,14 +18,16 @@ import java.util.List;
 
 //@RunWith(JUnitParallelized.class)
 //@RunWith(Parameterized.class)
+@Listeners({TestListener.class})
 public class LaunchPageTest extends BaseTestingClass {
     private final Logger LOGGER = Logger.getLogger(String.valueOf(LaunchPageTest.class));
 
-    public LaunchPageTest(String testN, List<String> expected) {
-        super(testN, expected);
-    }
+//    public LaunchPageTest(String testN, List<String> expected) {
+//        super(testN, expected);
+//    }
 
-    @Parameters({"testN", "expected"})
+   // @Parameters({"testN", "expected"})
+    //@DataProvider(name = "data for launch test")
     public static Iterable<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {"1", Arrays.asList("10", "1", "9", "1", "8", "5")},
