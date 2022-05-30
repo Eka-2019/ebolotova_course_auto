@@ -42,6 +42,9 @@ public class ReportPortalMainPage extends BasePage {
     @FindBy(xpath = "//a[contains(@class, \"gridCell\")]")
     private WebElement dashboardRowName;
 
+    @FindBy(xpath = "//a[contains(@href,\"#default_personal/launches\")][1]")
+    private WebElement rocketIcon;
+
     public ReportPortalMainPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
@@ -93,6 +96,14 @@ public class ReportPortalMainPage extends BasePage {
         return new ReportLoginPage(driver)
                 .openPage()
                 .loginToDashboardPage(testUser);
+    }
+
+    @Step("Get Launch report")
+    public LaunchPage getLaunchReport() {
+        Utils.waitForXpath(driver, 2000, "//a[contains(@href,\"#default_personal/launches\")][1]");
+        rocketIcon.click();
+        Utils.waitForXpath(driver, 2000, "//a[contains(@href,\"launches/all/5\")]");
+        return new LaunchPage(driver);
     }
 
 }

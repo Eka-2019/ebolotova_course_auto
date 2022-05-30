@@ -2,6 +2,7 @@ package tests;
 
 import model.User;
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.LaunchPage;
@@ -40,10 +41,7 @@ public class LaunchPageTest extends BaseTestingClass {
         LOGGER.info("Browser: " + System.getProperty("browser"));
         ReportPortalMainPage page = loginToPortalMainPage(testUser);
         LaunchPage launchPage = page.getLaunchReport();
-       // List<String> actualTest1 = launchPage.getEachDemoTestData(testN);
-       // Assert.assertEquals(expected, actualTest1);
+        List<String> actualTest1 = launchPage.getEachDemoTestData(testN);
+        Assert.assertEquals(expected, actualTest1);
     }
-
-
 }
-
