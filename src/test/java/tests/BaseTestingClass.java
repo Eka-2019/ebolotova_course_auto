@@ -12,11 +12,21 @@ import pages.ReportLoginPage;
 import pages.ReportPortalMainPage;
 import testlistener.TestListener;
 
+import java.util.List;
+
 @Listeners({TestListener.class})
 public class BaseTestingClass {
 
     protected DriverManager dm = new DriverManager();
     protected WebDriver driver;
+    protected String testN;
+    protected List<String> expected;
+
+
+    public BaseTestingClass(String testN, List<String> expected) {
+        this.testN = testN;
+        this.expected = expected;
+    }
 
     @BeforeMethod
     public void setUp(ITestContext context) {
