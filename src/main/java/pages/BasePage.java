@@ -33,10 +33,4 @@ public abstract class BasePage {
         this.base_url = System.getProperty("url");
     }
 
-    public ReportPortalMainPage loginToPortalMainPageOld(User testUser) {
-        driver = dm.getDriver();
-        return new ReportLoginPage(driver)
-                .openPage()
-                .loginToDashboardPage(testUser);
-    }
 }

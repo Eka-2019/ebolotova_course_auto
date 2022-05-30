@@ -2,6 +2,7 @@ package pages;
 
 import io.qameta.allure.Step;
 import lombok.Getter;
+import model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -85,5 +86,12 @@ public class ReportPortalMainPage extends BasePage {
     public ReportPortalMainPage getParticularDashboardPage(){
         dashboardName.click();
         return this;
+    }
+
+    public ReportPortalMainPage loginToPortalMainPage(User testUser) {
+        driver = dm.getDriver();
+        return new ReportLoginPage(driver)
+                .openPage()
+                .loginToDashboardPage(testUser);
     }
 }

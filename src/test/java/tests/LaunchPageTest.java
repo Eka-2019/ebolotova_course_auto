@@ -38,7 +38,7 @@ public class LaunchPageTest extends BaseTestingClass {
         LOGGER.info("User login and password: " + testUser);
         LOGGER.info("Url: " + System.getProperty("url"));
         LOGGER.info("Browser: " + System.getProperty("browser"));
-        ReportPortalMainPage page = loginToPortalMainPageOld(testUser);
+        ReportPortalMainPage page = loginToPortalMainPage(testUser);
         LaunchPage launchPage = page.getLaunchReport();
        // List<String> actualTest1 = launchPage.getEachDemoTestData(testN);
        // Assert.assertEquals(expected, actualTest1);
