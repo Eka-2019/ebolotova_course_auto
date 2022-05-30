@@ -23,7 +23,7 @@ public class LaunchPage extends BasePage{
         return By.xpath("//div[contains(@class,'gridRow__grid-row-wrapper') and @data-id='" + i + "']//div[contains(@class,'statistics')]");
     }
 
-//    public List<String> getEachDemoTestData(String testNumber) {
-//        return Utils.getElementsTextList(driver, getEachDemoTestXpath(testNumber));
-//    }
+    public List<String> getEachDemoTestData(String testNumber) {
+        return Utils.getElementsTextList(driver, getEachDemoTestXpath(testNumber));
+    }
 }
